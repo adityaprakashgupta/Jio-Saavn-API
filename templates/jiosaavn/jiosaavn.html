@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://adityaprakashgupta.me/JioSaavnAPI/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JioSaavn API [Unofficial] | JioSaavnAPI</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="JioSaavn API [Unofficial]">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://adityaprakashgupta.me/JioSaavnAPI/">
+<meta property="og:url" content="http://adityaprakashgupta.me/JioSaavnAPI/">
+<meta property="og:site_name" content="JioSaavnAPI">
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"JioSaavn API [Unofficial]","url":"http://adityaprakashgupta.me/JioSaavnAPI/","name":"JioSaavnAPI","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <style class="anchorjs"></style><link rel="stylesheet" href="{% static 'jiosaavn/style.css' %}">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="/">JioSaavnAPI</a></h1>
+      
+
+      <h2 id="jiosaavn-api-unofficial">JioSaavn API [Unofficial]<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#jiosaavn-api-unofficial" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+<h4 id="jiosaavn-api-written-in-python-using-flask">JioSaavn API written in Python using Django<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#jiosaavn-api-written-in-python-using-flask" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+<hr>
+<h6 id="note-you-dont-need-to-have-jiosaavn-link-of-the-song-in-order-to-fetch-the-song-details-you-can-directly-search-songs-by-their-name-fetching-songsalbumsplaylists-from-url-is-also-supported-in-this-api"><strong>NOTE:</strong> You don’t need to have JioSaavn link of the song in order to fetch the song details, you can directly search songs by their name. Fetching Songs/Albums/Playlists from URL is also supported in this API.<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#note-you-dont-need-to-have-jiosaavn-link-of-the-song-in-order-to-fetch-the-song-details-you-can-directly-search-songs-by-their-name-fetching-songsalbumsplaylists-from-url-is-also-supported-in-this-api" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h6>
+
+<hr>
+
+<h3 id="features"><strong>Features</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#features" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h5 id="currently-the-api-can-get-the-following-details-for-a-specific-song-in-json-format">Currently the API can get the following details for a specific song in JSON format:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#currently-the-api-can-get-the-following-details-for-a-specific-song-in-json-format" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<ul>
+  <li><strong>Song Name</strong></li>
+  <li><strong>Singer Name</strong></li>
+  <li><strong>Album Name</strong></li>
+  <li><strong>Album URL</strong></li>
+  <li><strong>Duration of Song</strong></li>
+  <li><strong>Song Thumbnail URL (Max Resolution)</strong></li>
+  <li><strong>Song Language</strong></li>
+  <li><strong>Download Link</strong></li>
+  <li><strong>Release Year</strong></li>
+  <li><strong>Album Art Link (Max Resolution)</strong></li>
+  <li><strong>Lyrics</strong></li>
+  <li>…. and much more!</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"album"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BIBA"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"album_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.jiosaavn.com/album/biba/98G3uzIs2qQ_"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"autoplay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"175"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"e_songid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ICERW0MFfQs"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"has_rbt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://c.saavncdn.com/987/BIBA-English-2019-20190201201359-500x500.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joytime Collective"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"label_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/label/joytime-collective-albums/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hindi"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"liked"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"map"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marshmello^~^/artist/marshmello-songs/Eevs5FiVgus_^~^Pritam Chakraborty^~^/artist/pritam-chakraborty-songs/OaFg9HPZgq8_^~^Shirley Setia^~^/artist/shirley-setia-songs/9qGdjoPJ1vM_^~^Pardeep Singh Sran^~^/artist/pardeep-singh-sran-songs/NIfiZRCrYQA_^~^Dev Negi^~^/artist/dev-negi-songs/NpCqdI4dD5U_"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"music"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"origin_val"</span><span class="p">:</span><span class="w"> </span><span class="s2">"biba"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pass_album_ctx"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"perma_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.jiosaavn.com/song/biba/ICERW0MFfQs"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"publish_to_fb"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"singers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marshmello, Pritam Chakraborty, Shirley Setia, Pardeep Singh Sran, Dev Negi"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"songid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PIzj75J8"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"starred"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"starring"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"streaming_source"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tiny_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.jiosaavn.com/song/biba/ICERW0MFfQs"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BIBA"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"twitter_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://twitter.com/share?url=https%3A%2F%2Fwww.jiosaavn.com%2Fsong%2Fbiba%2FICERW0MFfQs&amp;text=%23NowPlaying+%22BIBA%22+%40jiosaavn+%23OurSoundtrack&amp;related=jiosaavn"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://h.saavncdn.com/987/cd902d048c13e5ce6ca84cc409746a5d.mp3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="usage"><strong>Usage</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#usage" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>Fetching lyrics is optional and is triggered only when it is passed as an argument in the GET Request. (<strong>&amp;lyrics=true</strong>)
+<strong>If you enable lyrics search, it will take more time to fetch results</strong></p>
+
+<hr>
+<h5 id="universal-endpoint-supports-song-name-song-link-album-link-playlist-link"><strong>Universal Endpoint</strong>: (Supports Song Name, Song Link, Album Link, Playlist Link)<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#universal-endpoint-supports-song-name-song-link-album-link-playlist-link" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://apg-saavn-api.herokuapp.com/result/?q<span class="o">=</span>&lt;insert-jiosaavn-link-or-query-here&gt;&amp;lyrics<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+<p><strong>Example:</strong> Navigate to https://apg-saavn-api.herokuapp.com/result/?q=alone to get a JSON response of songs data in return.</p>
+
+<hr>
+
+<h5 id="song-url-endpoint"><strong>Song URL Endpoint</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#song-url-endpoint" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://apg-saavn-api.herokuapp.com/song/?q<span class="o">=</span>&lt;insert-jiosaavn-song-link&gt;&amp;lyrics<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+<p><strong>Example:</strong> Navigate to https://apg-saavn-api.herokuapp.com/song/?q=https://www.jiosaavn.com/song/khairiyat/PwAFSRNpAWw to get a JSON response of song data in return.</p>
+
+<hr>
+
+<h5 id="playlist-url-endpoint"><strong>Playlist URL Endpoint</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#playlist-url-endpoint" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://apg-saavn-api.herokuapp.com/playlist/?q<span class="o">=</span>&lt;insert-jiosaavn-playlist-link&gt;&amp;lyrics<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+<p><strong>Example:</strong> Navigate to https://apg-saavn-api.herokuapp.com/playlist/?q=https://www.jiosaavn.com/featured/romantic-hits-2020—hindi/ABiMGqjovSFuOxiEGmm6lQ__ to get a JSON response of playlist data in return.</p>
+
+<hr>
+
+<h5 id="album-url-endpoint"><strong>Album URL Endpoint</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#album-url-endpoint" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://apg-saavn-api.herokuapp.com/album/?q<span class="o">=</span>&lt;insert-jiosaavn-album-link&gt;&amp;lyrics<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+<p><strong>Example:</strong> Navigate to https://apg-saavn-api.herokuapp.com/album/?q=https://www.jiosaavn.com/album/chhichhore/V4F3M5,cNb4_ to get a JSON response of album data in return.</p>
+
+<hr>
+
+<h5 id="lyrics-endpoint"><strong>Lyrics Endpoint</strong>:<a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#lyrics-endpoint" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://apg-saavn-api.herokuapp.com/lyrics/?q<span class="o">=</span>&lt;insert-jiosaavn-song-link-or-song-id&gt;&amp;lyrics<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+<p><strong>Example:</strong> Navigate to https://apg-saavn-api.herokuapp.com/lyrics/?q=https://www.jiosaavn.com/song/khairiyat/PwAFSRNpAWw to get a JSON response of album data in return.</p>
+
+<hr>
+
+<h3 id="-aditya--aryan">© <a href="https://aditya-web-py.github.io/">Aditya Prakash Gupta</a><a class="anchorjs-link " href="https://adityaprakashgupta.me/JioSaavnAPI/#-aditya--aryan" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+
+      
+    </div>
+    <script src="{% static 'jiosaavn/anchor.min.js' %}" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  
+
+</body></html>

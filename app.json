@@ -1,0 +1,13 @@
+{
+    "name": "Jio Saavn API",
+    "description": "Unofficial API of JioSaavn.",
+    "author": "Aditya Prakash Gupta",
+    "keywords": [
+        "django",
+        "python",
+        "saavn",
+        "jiosaavn",
+        "music"
+    ],
+    "repository": "https://github.com/aditya-web-py/Jio-Saavn-API"
+}
