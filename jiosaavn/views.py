@@ -10,15 +10,19 @@ def home(request):
 
 def search(request):
     lyrics = False
+    songdata = True
     query = request.GET.get('q')
     lyrics_ = request.GET.get('lyrics')
+    songdata_ = request.GET.get('songdata')
     if lyrics_ and lyrics_.lower()!='false':
         lyrics = True
+    if songdata_ and songdata_.lower()!='true':
+        songdata = False
     if query:
         #return jsonify(jiosaavn.search_for_song(query,lyrics))
-        song_id = jios.get_song_id(query)
-        song = jios.get_song(song_id,lyrics)
-        return JsonResponse(song)
+        # song_id = jios.get_song_id(query)
+        # song = jios.get_song(song_id,lyrics)
+        return JsonResponse(jios.search_for_song(query, lyrics, songdata))
     else:
         error = {
             "status": False,
@@ -98,7 +102,7 @@ def result(request):
         lyrics = True
 
     if 'saavn.com' not in query:
-        return JsonResponse(jios.search_for_song(query,lyrics), safe=False)
+        return JsonResponse(jios.search_for_song(query,lyrics,True), safe=False)
     try:
         if '/song/' in query:
             print("Song")
