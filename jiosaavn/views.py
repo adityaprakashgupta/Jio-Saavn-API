@@ -94,8 +94,6 @@ def lyrics(request):
 
 def result(request):
     lyrics = False
-    false = False
-    true = True
     query = request.GET.get('q')
     lyrics_ = request.GET.get('lyrics')
     if lyrics_ and lyrics_.lower()!='false':
